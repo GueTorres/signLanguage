@@ -1,6 +1,7 @@
 package com.example.synage;
 
 package com.google.mediapipe.apps.handdetectiongpu;
+package com.google.mediapipe.apps.handtrackinggpu;
 
 import android.graphics.SurfaceTexture;
 import android.os.Bundle;
