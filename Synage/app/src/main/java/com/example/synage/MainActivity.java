@@ -1,6 +1,7 @@
 package com.example.synage;
 
 import android.Manifest;
+import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Bundle;
 import android.view.Menu;
@@ -50,6 +51,7 @@ public class MainActivity extends AppCompatActivity {
     private void Syn(View view) {
 
         // Here, thisActivity is the current activity
+        // Permission has already been granted
         if (ContextCompat.checkSelfPermission(MainActivity.this,
                 Manifest.permission.CAMERA)
                 != PackageManager.PERMISSION_GRANTED) {
@@ -71,9 +73,7 @@ public class MainActivity extends AppCompatActivity {
                 // app-defined int constant. The callback method gets the
                 // result of the request.
             }
-        } else {
-            // Permission has already been granted
-        }
-        }
+        } else startActivity(new Intent(Intent.ACTION_CAMERA_BUTTON));
     }
 }
+
